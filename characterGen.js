@@ -46,3 +46,11 @@ ERLW:
         }
     )
 */
+const feats = [{name: 'feat1'}, {name: 'feat2'}];
+feats.forEach((n) => {
+    switch (element.name) {
+        case 'feat1':
+        element.srcBook = 'srcBook1';
+        console.log(element.name);
+    }
+});
