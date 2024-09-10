@@ -35,3 +35,14 @@ ERLW:
 
 *Check spreadsheets for server-specific errata
 */
+
+/*
+    I think i found a good way to make this generation
+    const feats = [feat1 {}, feat2 {}, feat3 {}...]
+    feats.forEach((n) =>
+        switch (element.name) {
+            case 'feat1':
+            element.srcBook = 'srcBook1';
+        }
+    )
+*/
