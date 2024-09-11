@@ -46,11 +46,10 @@ ERLW:
         }
     )
 */
-const feats = [{name: 'feat1'}, {name: 'feat2'}];
-feats.forEach((n) => {
+const feats = [{name: 'feat1'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}, {name: 'feat2'}];
+feats.forEach((element) => {
     switch (element.name) {
         case 'feat1':
         element.srcBook = 'srcBook1';
-        console.log(element.name);
     }
 });
