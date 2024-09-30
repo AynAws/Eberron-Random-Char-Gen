@@ -7,18 +7,16 @@ const WEEKDAYS = ["Sul", "Mol", "Zol", "Wir", "Zor", "Far", "Sar"];
 
 const irlDate = new Date();
 let numberYear = irlDate.getFullYear() - 1022;
-const eberronYear = `${numberYear} YK`;
 let numberMonth = irlDate.getMonth();
-const eberronMonth = MONTHS[numberMonth];
 let numberDate = irlDate.getDate()
-const eberronDate = numberDate;
-
-console.log(`It is ${eberronDate} ${eberronMonth} of ${eberronYear}`);
+let eberronDate = numberDate;
 
 function renderCalendar() {
+    const eberronMonth = MONTHS[numberMonth];
+    const eberronYear = `${numberYear} YK`;
     // Check if the current day is the last day (28) in the fixed Eberron month
-    eberronDate >= 28 ? eberronDate === 28 : null;
-
+    eberronDate >= 28 ? eberronDate = 28 : null;
+    console.log(eberronDate);
     const monthYear = document.getElementById("monthYear");
     const daysContainer = document.getElementById("days");
     const weekdaysContainer = document.getElementById("weekdays");
@@ -41,18 +39,31 @@ function renderCalendar() {
 
     // Highlight the current day
     const dayDivs = daysContainer.children;
-    if (dayDivs[eberronDate - 1] && eberronMonth === MONTHS[irlDate.getMonth()]) {
+    if (dayDivs[eberronDate - 1] && eberronMonth === MONTHS[irlDate.getMonth()] && numberYear === irlDate.getFullYear() - 1022) {
         dayDivs[eberronDate - 1].classList.add("highlight");
     }
 }
 
-function removeMonth() {
+function prevMonth() {
     numberMonth--;
-    renderCalendar;
+    if (numberMonth < 0) {
+        numberMonth = MONTHS.length - 1; // Wrap around to the last month
+        numberYear--; // Decrease the year
+    }
+    renderCalendar();
 }
 
-document.getElementById("prevMonth").addEventListener("click", removeMonth());
-//document.getElementById("nextMonth").addEventListener("click", addMonth());
+function nextMonth() {
+    numberMonth++;
+    if (numberMonth > 11) {
+        numberMonth = 0; // Wrap around to the last month
+        numberYear++; // Decrease the year
+    }
+    renderCalendar();
+}
+
+document.getElementById("prevMonth").addEventListener("click", prevMonth);
+document.getElementById("nextMonth").addEventListener("click", nextMonth);
 
 
 
