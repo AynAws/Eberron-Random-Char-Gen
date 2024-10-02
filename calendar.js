@@ -48,16 +48,40 @@ function renderCalendar() {
         case "Zarantyr":
             break;
         case "Olarune":
+            if (dayDivs[9 - 1]) {
+                dayDivs[9 - 1].classList.add("holiday");
+                dayDivs[9 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Crystalfall'}));
+            }
+            if (dayDivs[20 - 1]) {
+                dayDivs[20 - 1].classList.add("holiday");
+                dayDivs[20 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Day of Mourning'}));
+            }
             break;
         case "Therendor":
+            if (dayDivs[15 - 1]) {
+                dayDivs[15 - 1].classList.add("holiday");
+                dayDivs[15 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Sun's Blessing"}));
+            }
             break;
         case "Eyre":
             break;
         case "Dravago":
+            if (dayDivs[26 - 1]) {
+                dayDivs[26 - 1].classList.add("holiday");
+                dayDivs[26 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Aureon's Crown"}));
+            }
             break;
         case "Nymm":
+            if (dayDivs[12 - 1]) {
+                dayDivs[12 - 1].classList.add("holiday");
+                dayDivs[12 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Brightblade'}));
+            }
             break;
         case "Lharvion":
+            if (dayDivs[23 - 1]) {
+                dayDivs[23 - 1].classList.add("holiday");
+                dayDivs[23 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Race of Eight Winds'}));
+            }
             break;
         case "Barrakas":
             if (dayDivs[4 - 1]) {
