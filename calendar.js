@@ -42,8 +42,8 @@ function renderCalendar() {
     if (dayDivs[eberronDate - 1] && eberronMonth === MONTHS[irlDate.getMonth()] && numberYear === irlDate.getFullYear() - 1022) {
         dayDivs[eberronDate - 1].classList.add("highlight");
     }
-    let tooltipDiv = document.createElement("span");
-    tooltipDiv.classList.add("tooltiptext");
+    let tooltipDiv = Object.assign(document.createElement('span'), { className: 'tooltiptext'});
+    let holidayInfo = document.createElement("a");
     // Highlight holidays
     switch (MONTHS[numberMonth]) {
         case "Zarantyr":
@@ -65,9 +65,10 @@ function renderCalendar() {
         case "Rhaan":
             break;
         case "Sypheros":
-            tooltipDiv.textContent = "content";
+            tooltipDiv.textContent = '<a href="http://eberronunlimited.wikidot.com/eberron-calendar">Wildnight</a>';
             if (dayDivs[18 - 1]) {
                 dayDivs[18 - 1].classList.add("holiday");
+                tooltipDiv.textContent = 'Wildnight';
                 dayDivs[18 - 1].appendChild(tooltipDiv);
             }
             if (dayDivs[19 - 1]) {
