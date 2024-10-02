@@ -42,6 +42,43 @@ function renderCalendar() {
     if (dayDivs[eberronDate - 1] && eberronMonth === MONTHS[irlDate.getMonth()] && numberYear === irlDate.getFullYear() - 1022) {
         dayDivs[eberronDate - 1].classList.add("highlight");
     }
+
+    // Highlight holidays
+    switch (MONTHS[numberMonth]) {
+        case "Zarantyr":
+            break;
+        case "Olarune":
+            break;
+        case "Therendor":
+            break;
+        case "Eyre":
+            break;
+        case "Dravago":
+            break;
+        case "Nymm":
+            break;
+        case "Lharvion":
+            break;
+        case "Barrakas":
+            break;
+        case "Rhaan":
+            break;
+        case "Sypheros":
+            if (dayDivs[18 - 1]) {
+                dayDivs[18 - 1].classList.add("holiday");
+            }
+            if (dayDivs[19 - 1]) {
+                dayDivs[19 - 1].classList.add("holiday");
+            }
+            break;
+        case "Aryth":
+            break;
+        case "Vult":
+            break;
+    }
+    if (dayDivs[18 - 1] && eberronMonth === MONTHS[irlDate.getMonth()]) {
+        dayDivs[18 - 1].classList.add("holiday");
+    }
 }
 
 function prevMonth() {

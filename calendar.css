@@ -10,10 +10,6 @@ body {
     height: 100vh;
 }
 
-button {
-    
-}
-
 .calendar-container {
     background: white;
     border-radius: 10px;
@@ -51,10 +47,17 @@ button {
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #fff;
+    border-width: 2px;
 }
 
 .days div.highlight {
     background-color: #add8e6;
+    font-weight: bold;
+    color: #333;
+}
+
+div.holiday {
+    border-color: red;
     font-weight: bold;
     color: #333;
 }
