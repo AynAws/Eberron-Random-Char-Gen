@@ -42,7 +42,6 @@ function renderCalendar() {
     if (dayDivs[eberronDate - 1] && eberronMonth === MONTHS[irlDate.getMonth()] && numberYear === irlDate.getFullYear() - 1022) {
         dayDivs[eberronDate - 1].classList.add("highlight");
     }
-    let tooltipDiv = Object.assign(document.createElement('span'), { className: 'tooltiptext'});
     let holidayInfo = document.createElement("a");
     // Highlight holidays
     switch (MONTHS[numberMonth]) {
@@ -61,23 +60,50 @@ function renderCalendar() {
         case "Lharvion":
             break;
         case "Barrakas":
+            if (dayDivs[4 - 1]) {
+                dayDivs[4 - 1].classList.add("holiday");
+                dayDivs[4 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "The Hunt"}));
+            }
+            if (dayDivs[25 - 1]) {
+                dayDivs[25 - 1].classList.add("holiday");
+                dayDivs[25 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Fathen's Fall"}));
+            }
             break;
         case "Rhaan":
+            if (dayDivs[9 - 1]) {
+                dayDivs[9 - 1].classList.add("holiday");
+                dayDivs[9 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Boldrei's Feast"}));
+            }
             break;
         case "Sypheros":
-            tooltipDiv.textContent = '<a href="http://eberronunlimited.wikidot.com/eberron-calendar">Wildnight</a>';
             if (dayDivs[18 - 1]) {
                 dayDivs[18 - 1].classList.add("holiday");
-                tooltipDiv.textContent = 'Wildnight';
-                dayDivs[18 - 1].appendChild(tooltipDiv);
+                dayDivs[18 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Wildnight'}));
             }
             if (dayDivs[19 - 1]) {
                 dayDivs[19 - 1].classList.add("holiday");
+                dayDivs[19 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Wildnight'}));
             }
             break;
         case "Aryth":
+            if (dayDivs[11 - 1]) {
+                dayDivs[11 - 1].classList.add("holiday");
+                dayDivs[11 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Thronehold'}));
+            }
             break;
         case "Vult":
+            if (dayDivs[26 - 1]) {
+                dayDivs[26 - 1].classList.add("holiday");
+                dayDivs[26 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Long Shadows'}));
+            }
+            if (dayDivs[27 - 1]) {
+                dayDivs[27 - 1].classList.add("holiday");
+                dayDivs[27 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Long Shadows'}));
+            }
+            if (dayDivs[28 - 1]) {
+                dayDivs[28 - 1].classList.add("holiday");
+                dayDivs[28 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Long Shadows'}));
+            }
             break;
     }
     if (dayDivs[18 - 1] && eberronMonth === MONTHS[irlDate.getMonth()]) {
