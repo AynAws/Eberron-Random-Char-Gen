@@ -116,7 +116,7 @@ span {
     border-color: #555 transparent transparent transparent;
   }
   
-  .holiday:hover .tooltiptext {
+  .holiday:hover .holiday:active .tooltiptext {
     visibility: visible;
     opacity: 1;
   }
