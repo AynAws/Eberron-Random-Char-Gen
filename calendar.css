@@ -62,6 +62,10 @@ div.holiday {
     color: #333;
 }
 
+div.more-holidays {
+    border-style:dashed;
+}
+
 .navigation {
     margin-top: 10px;
 }

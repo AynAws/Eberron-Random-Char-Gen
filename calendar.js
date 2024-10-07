@@ -46,11 +46,35 @@ function renderCalendar() {
     // Highlight holidays
     switch (MONTHS[numberMonth]) {
         case "Zarantyr":
+            if (dayDivs[10 - 1]) {
+                dayDivs[10 - 1].classList.add("holiday");
+                dayDivs[10 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Void of Taratai'}));
+            }
+            if (dayDivs[11 - 1]) {
+                dayDivs[11 - 1].classList.add("holiday");
+                dayDivs[11 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Void of Taratai'}));
+            }
+            if (dayDivs[12 - 1]) {
+                dayDivs[12 - 1].classList.add("holiday");
+                dayDivs[12 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Void of Taratai'}));
+            }
+            if (dayDivs[13 - 1]) {
+                dayDivs[13 - 1].classList.add("holiday");
+                dayDivs[13 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Void of Taratai'}));
+            }
+            if (dayDivs[14 - 1]) {
+                dayDivs[14 - 1].classList.add("holiday");
+                dayDivs[14 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Void of Taratai'}));
+            }
             break;
         case "Olarune":
             if (dayDivs[9 - 1]) {
                 dayDivs[9 - 1].classList.add("holiday");
                 dayDivs[9 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Crystalfall'}));
+            }
+            if (dayDivs[18 - 1]) {
+                dayDivs[18 - 1].classList.add("holiday");
+                dayDivs[18 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Bright Soul's Day"}));
             }
             if (dayDivs[20 - 1]) {
                 dayDivs[20 - 1].classList.add("holiday");
@@ -58,26 +82,126 @@ function renderCalendar() {
             }
             break;
         case "Therendor":
+            if (dayDivs[1 - 1]) {
+                dayDivs[1 - 1].classList.add("holiday", "more-holidays");
+                dayDivs[1 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Burning Titan, Brightfest'}));
+            }
+            if (dayDivs[2 - 1]) {
+                dayDivs[2 - 1].classList.add("holiday");
+                dayDivs[2 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Brightfest'}));
+            }
+            if (dayDivs[3 - 1]) {
+                dayDivs[3 - 1].classList.add("holiday");
+                dayDivs[3 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Brightfest'}));
+            }
+            if (dayDivs[5 - 1]) {
+                dayDivs[5 - 1].classList.add("holiday");
+                dayDivs[5 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Tirasday'}));
+            }
             if (dayDivs[15 - 1]) {
                 dayDivs[15 - 1].classList.add("holiday");
                 dayDivs[15 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Sun's Blessing"}));
             }
             break;
         case "Eyre":
+            if (dayDivs[13 - 1]) {
+                dayDivs[13 - 1].classList.add("holiday");
+                dayDivs[13 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Shargon's Bargain"}));
+            }
             break;
         case "Dravago":
+            if (dayDivs[6 - 1]) {
+                dayDivs[6 - 1].classList.add("holiday");
+                dayDivs[6 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Baker's Night"}));
+            }
+            if (dayDivs[20 - 1]) {
+                dayDivs[20 - 1].classList.add("holiday");
+                dayDivs[20 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Pirate's Moon"}));
+            }
             if (dayDivs[26 - 1]) {
                 dayDivs[26 - 1].classList.add("holiday");
                 dayDivs[26 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Aureon's Crown"}));
             }
+            if (dayDivs[26 - 1]) {
+                dayDivs[26 - 1].classList.add("holiday");
+                dayDivs[26 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Aureon's Crown"}));
+            }
+            if (dayDivs[28 - 1]) {
+                dayDivs[28 - 1].classList.add("holiday");
+                dayDivs[28 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Promisetide"}));
+            }
             break;
         case "Nymm":
+            if (dayDivs[1 - 1]) {
+                dayDivs[1 - 1].classList.add("holiday");
+                dayDivs[1 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Annual Games'}));
+            }
+            if (dayDivs[2 - 1]) {
+                dayDivs[2 - 1].classList.add("holiday");
+                dayDivs[2 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Annual Games'}));
+            }
+            if (dayDivs[3 - 1]) {
+                dayDivs[3 - 1].classList.add("holiday");
+                dayDivs[3 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Annual Games'}));
+            }
+            if (dayDivs[4 - 1]) {
+                dayDivs[4 - 1].classList.add("holiday");
+                dayDivs[4 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Annual Games'}));
+            }
+            if (dayDivs[5 - 1]) {
+                dayDivs[5 - 1].classList.add("holiday");
+                dayDivs[5 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Annual Games'}));
+            }
+            if (dayDivs[6 - 1]) {
+                dayDivs[6 - 1].classList.add("holiday");
+                dayDivs[6 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Annual Games'}));
+            }
+            if (dayDivs[7 - 1]) {
+                dayDivs[7 - 1].classList.add("holiday");
+                dayDivs[7 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Annual Games'}));
+            }
+            if (dayDivs[8 - 1]) {
+                dayDivs[8 - 1].classList.add("holiday");
+                dayDivs[8 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Annual Games'}));
+            }
+            if (dayDivs[9 - 1]) {
+                dayDivs[9 - 1].classList.add("holiday");
+                dayDivs[9 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Annual Games'}));
+            }
+            if (dayDivs[10 - 1]) {
+                dayDivs[10 - 1].classList.add("holiday");
+                dayDivs[10 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Annual Games'}));
+            }
+            if (dayDivs[11 - 1]) {
+                dayDivs[11 - 1].classList.add("holiday");
+                dayDivs[11 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Annual Games'}));
+            }
             if (dayDivs[12 - 1]) {
-                dayDivs[12 - 1].classList.add("holiday");
-                dayDivs[12 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Brightblade'}));
+                dayDivs[12 - 1].classList.add("holiday", "more-holidays");
+                dayDivs[12 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Brightblade, The Annual Games'}));
+            }
+            if (dayDivs[13 - 1]) {
+                dayDivs[13 - 1].classList.add("holiday");
+                dayDivs[13 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Annual Games'}));
+            }
+            if (dayDivs[14 - 1]) {
+                dayDivs[14 - 1].classList.add("holiday");
+                dayDivs[14 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Annual Games'}));
+            }
+            if (dayDivs[21 - 1]) {
+                dayDivs[21 - 1].classList.add("holiday");
+                dayDivs[21 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'First Dawn'}));
             }
             break;
         case "Lharvion":
+            if (dayDivs[7 - 1]) {
+                dayDivs[7 - 1].classList.add("holiday");
+                dayDivs[7 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Masque'}));
+            }
+            if (dayDivs[14 - 1]) {
+                dayDivs[14 - 1].classList.add("holiday");
+                dayDivs[14 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Silvertide'}));
+            }
             if (dayDivs[23 - 1]) {
                 dayDivs[23 - 1].classList.add("holiday");
                 dayDivs[23 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Race of Eight Winds'}));
