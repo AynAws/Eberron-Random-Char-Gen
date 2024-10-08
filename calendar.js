@@ -311,4 +311,4 @@ document.getElementById("nextMonth").addEventListener("click", nextMonth);
 
 
 
-window.onload = renderCalendar();
+window.onload = renderCalendar;
