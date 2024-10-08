@@ -224,6 +224,10 @@ function renderCalendar() {
             }
             break;
         case "Sypheros":
+            if (dayDivs[1 - 1]) {
+                dayDivs[1 - 1].classList.add("holiday");
+                dayDivs[1 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Ascension'}));
+            }
             if (dayDivs[18 - 1]) {
                 dayDivs[18 - 1].classList.add("holiday");
                 dayDivs[18 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Wildnight'}));
@@ -234,12 +238,28 @@ function renderCalendar() {
             }
             break;
         case "Aryth":
+            if (dayDivs[1 - 1]) {
+                dayDivs[1 - 1].classList.add("holiday");
+                dayDivs[1 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Shacklebreak'}));
+            }
             if (dayDivs[11 - 1]) {
                 dayDivs[11 - 1].classList.add("holiday");
                 dayDivs[11 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Thronehold'}));
             }
+            if (dayDivs[20 - 1]) {
+                dayDivs[20 - 1].classList.add("holiday");
+                dayDivs[20 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Arawai's Blessing"}));
+            }
+            if (dayDivs[24 - 1]) {
+                dayDivs[24 - 1].classList.add("holiday");
+                dayDivs[24 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Rampartide'}));
+            }
             break;
         case "Vult":
+            if (dayDivs[21 - 1]) {
+                dayDivs[21 - 1].classList.add("holiday");
+                dayDivs[21 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Khybersef'}));
+            }
             if (dayDivs[26 - 1]) {
                 dayDivs[26 - 1].classList.add("holiday");
                 dayDivs[26 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Long Shadows'}));
