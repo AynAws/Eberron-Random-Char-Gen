@@ -46,6 +46,10 @@ function renderCalendar() {
     // Highlight holidays
     switch (MONTHS[numberMonth]) {
         case "Zarantyr":
+            if (dayDivs[7 - 1]) {
+                dayDivs[7 - 1].classList.add("holiday");
+                dayDivs[7 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Onatar's Flame"}));
+            }
             if (dayDivs[10 - 1]) {
                 dayDivs[10 - 1].classList.add("holiday");
                 dayDivs[10 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Void of Taratai'}));
@@ -72,6 +76,10 @@ function renderCalendar() {
                 dayDivs[9 - 1].classList.add("holiday");
                 dayDivs[9 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Crystalfall'}));
             }
+            if (dayDivs[14 - 1]) {
+                dayDivs[14 - 1].classList.add("holiday");
+                dayDivs[14 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Turrant’s Gift"}));
+            }
             if (dayDivs[18 - 1]) {
                 dayDivs[18 - 1].classList.add("holiday");
                 dayDivs[18 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Bright Soul's Day"}));
@@ -79,6 +87,10 @@ function renderCalendar() {
             if (dayDivs[20 - 1]) {
                 dayDivs[20 - 1].classList.add("holiday");
                 dayDivs[20 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Day of Mourning'}));
+            }
+            if (dayDivs[28 - 1]) {
+                dayDivs[28 - 1].classList.add("holiday");
+                dayDivs[28 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Winter's End"}));
             }
             break;
         case "Therendor":
@@ -173,8 +185,8 @@ function renderCalendar() {
                 dayDivs[10 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Annual Games'}));
             }
             if (dayDivs[11 - 1]) {
-                dayDivs[11 - 1].classList.add("holiday");
-                dayDivs[11 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Annual Games'}));
+                dayDivs[11 - 1].classList.add("holiday", "more-holidays");
+                dayDivs[11 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Second Skin, The Annual Games'}));
             }
             if (dayDivs[12 - 1]) {
                 dayDivs[12 - 1].classList.add("holiday", "more-holidays");
@@ -199,8 +211,8 @@ function renderCalendar() {
                 dayDivs[7 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'The Masque'}));
             }
             if (dayDivs[14 - 1]) {
-                dayDivs[14 - 1].classList.add("holiday");
-                dayDivs[14 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Silvertide'}));
+                dayDivs[14 - 1].classList.add("holiday", "more-holidays");
+                dayDivs[14 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Silvertide, Bounty's Blessing"}));
             }
             if (dayDivs[23 - 1]) {
                 dayDivs[23 - 1].classList.add("holiday");
@@ -247,8 +259,8 @@ function renderCalendar() {
                 dayDivs[11 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Thronehold'}));
             }
             if (dayDivs[20 - 1]) {
-                dayDivs[20 - 1].classList.add("holiday");
-                dayDivs[20 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Arawai's Blessing"}));
+                dayDivs[20 - 1].classList.add("holiday", "more-holidays");
+                dayDivs[20 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: "Arawai's Blessing, Market Day"}));
             }
             if (dayDivs[24 - 1]) {
                 dayDivs[24 - 1].classList.add("holiday");
@@ -273,9 +285,6 @@ function renderCalendar() {
                 dayDivs[28 - 1].appendChild(Object.assign(document.createElement('span'), { className: 'tooltiptext', textContent: 'Long Shadows'}));
             }
             break;
-    }
-    if (dayDivs[18 - 1] && eberronMonth === MONTHS[irlDate.getMonth()]) {
-        dayDivs[18 - 1].classList.add("holiday");
     }
 }
 
