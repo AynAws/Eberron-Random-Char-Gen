@@ -29,3 +29,25 @@ body {
 .eberronNav {
     background-color: #cabe9e;
 }
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid #d0c4a2;
+    background-color: #e9e0c7;
+    border-radius: 5px;
+}
+
+button:hover {
+    animation-name: button-darken;
+    animation-duration: 250ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes button-darken {
+    to {
+        background-color: #cbb579;
+    }
+}
